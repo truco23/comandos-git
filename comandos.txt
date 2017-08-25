@@ -8,3 +8,9 @@ git commit -am                      = adiciona arquivo e realiza commit juntamen
 git whatchanged/git whatchanged -p  = exibe log de commits e quais arquivos foram alterados
 git remote                          = exibe os repositórios do seu projeto
 git remote add url_repositorio      = adiciona um repositório ao seu projeto local
+
+
+*************************************
+
+git branch                          = cria uma nova branch
+git branch -b checkout nome_branch  = cria um nova branch e seleciona
