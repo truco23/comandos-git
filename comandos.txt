@@ -14,3 +14,9 @@ git remote add url_repositorio      = adiciona um repositório ao seu projeto lo
 
 git branch                          = cria uma nova branch
 git branch -b checkout nome_branch  = cria um nova branch e seleciona
+git push -u origin nome_branch      = cria uma nova branch porém ao realizar pull não será necessário especificar o nome da nova branch
+git branch -r                       = permite visualizar as branch remota
+git checkout -t origin/design       = copiando a branch remota para local
+git branch -a                       = lista as branch remotas e locais
+git push -d origin design           = remove a branch remota
+git fetch origin                    = verificar se foram criadas novas branch no repositório remoto
