@@ -20,3 +20,11 @@ git checkout -t origin/design       = copiando a branch remota para local
 git branch -a                       = lista as branch remotas e locais
 git push -d origin design           = remove a branch remota
 git fetch origin                    = verificar se foram criadas novas branch no repositório remoto
+
+
+***************************************
+
+git tag                             = exibe todas as tags
+git show <nome-tag>                 = exibe uma tag expecífica
+git tag -a <versao> -m "<comentario>" = cria uma tag nome a versão e um comentário
+git push origin <nome-tag>          = envia a tag para ambiente remoto
