@@ -1,26 +1,104 @@
-git init                            = inicia um repositório com o git
-git config user.name "nome user"    = adiciona nome usuário
-git config user.email "email user"  = adiciona email usuário
-git blame                           = mostra quem realizou alterações no projeto
-git ls-files                        = mostra os arquivos que o git está monitorando
-git add                             = adiciona um arquivo novo à ser monitorado / arquivo alterado
 # Comandos Git
 
-* Iniciar um repositório utilizando o git
+
+## Iniciando projeto
+* Inicia um repositório utilizando o git
 ```
 git init
 ```
 
-* Adicionar arquivo e realizar commit juntamente com uma mensagem
+## Configurações
+* Adiciona um nome usuário
 ```
-git commit -am
+git config user.name "<nome usuário>"
 ```
 
-git whatchanged/git whatchanged -p  = exibe log de commits e quais arquivos foram alterados
-git remote                          = exibe os repositórios do seu projeto
-git remote add url_repositorio      = adiciona um repositório ao seu projeto local
+* Adiciona um endereço de e-mail
+```
+git config user.email "<seu email>"
+```
+
+## Visualizando alterações
+* Lista todos os arquivos que sofreram alguma alteração
+```
+git status
+```
+
+* Lista todos os arquivos que sofreram alguma alteração e o que foi alterado
+```
+git diff
+```
+
+* Mostra o que foi alterado no arquivo
+```
+git diff <nome arquivo>
+```
+
+## Preparando arquivos para o commit
+* Adiciona um arquivo a sua staged área pronto para ser realizado um commit
+```
+git add <nome arquivo>
+```
+
+* Adiciona todos arquivos a sua staged área pronto para ser realizado um commit
+```
+git add -A
+```
 
 
+## Realizando commits
+* Realiza um commit com uma mensagem de descrição
+```
+git commit -m "<mensagem de descrição>"
+```
+
+* Realiza um commit com uma mensagem de descrição
+```
+git commit -m "<mensagem de descrição>"
+```
+* Adiciona todos os arquivos alterados e uma mensagem de descrição
+```
+git commit -am <mensagem de descrição>
+```
+
+## Exibindo log
+* Exibe log de commits e quais arquivos foram alterados
+```
+git whatchanged
+git whatchanged -p
+```
+
+* Mostra todos os commits realizados 
+```
+git log
+```
+
+* Mostra todos os commits realizados de forma resumida de todas as branchs e um gráfico com histórico das alterações
+```
+git log --online --decorate --all --graph
+```
+
+## Repositório local
+* Exibe os repositórios do seu projeto
+```
+git remote
+```
+
+* Adiciona um repositório ao seu projeto local
+```
+git remote add url_repositorio
+```
+
+* Envia as alteraçõs locais para o repositório remoto
+```
+git push origin <nome branch>
+```
+
+
+
+
+git blame                           = mostra quem realizou alterações no projeto
+git ls-files                        = mostra os arquivos que o git está monitorando
 *************************************
 
 git branch                          = cria uma nova branch
