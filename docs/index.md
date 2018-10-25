@@ -55,6 +55,7 @@ git commit -m "<mensagem de descrição>"
 * Realiza um commit com uma mensagem de descrição
 ```
 git commit -m "<mensagem de descrição>"
+
 ```
 * Adiciona todos os arquivos alterados e uma mensagem de descrição
 ```
@@ -78,17 +79,34 @@ git log
 git log --online --decorate --all --graph
 ```
 
-## Repositório local
-* Exibe os repositórios do seu projeto
+## Repositório remoto
+* Exibe as urls dos seus repositórios remotos
 ```
 git remote
 ```
 
-* Adiciona um repositório ao seu projeto local
+* Exibe a url e nome dos seus repositórios remotos
 ```
-git remote add url_repositorio
+git remote -v
 ```
 
+* Adiciona um repositório ao seu projeto local
+```
+git remote add <nome repositório> <url do repositório>
+```
+
+* Remonea repositório
+```
+git remote rename <nome antigo> <novo nome>
+```
+
+* Remove repositório
+```
+git remote remove <nome repositório>
+```
+
+
+## Enviando suas alterações para o repositório remoto
 * Envia as alteraçõs locais para o repositório remoto
 ```
 git push origin <nome branch>
