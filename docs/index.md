@@ -52,11 +52,6 @@ git add -A
 git commit -m "<mensagem de descrição>"
 ```
 
-* Realiza um commit com uma mensagem de descrição
-```
-git commit -m "<mensagem de descrição>"
-
-```
 * Adiciona todos os arquivos alterados e uma mensagem de descrição
 ```
 git commit -am <mensagem de descrição>
@@ -106,12 +101,47 @@ git remote remove <nome repositório>
 ```
 
 
-## Enviando suas alterações para o repositório remoto
+## Enviando alterações
 * Envia as alteraçõs locais para o repositório remoto
 ```
 git push origin <nome branch>
 ```
 
+##Tags
+* Exibe todas as tags
+```
+git tag
+```
+
+* Exibe informações sobre a tag
+```
+git show <nome tag>
+```
+
+* Cria uma nova tag e adiciona uma mensagem de descrição
+```
+git tag -a <versao> -m "<comentario>"
+```
+
+* Envia a tag local para o repositório remoto
+```
+git push origin <nome-tag>
+```
+
+* Envia todas tag local para o repositório remoto
+```
+git push origin --tags
+```
+
+* Deleta tag do repositório remoto
+```
+git push --delete origin <nome tag>
+```
+
+* Deleta tag do repositório local
+```
+git tag -d <nome tag>
+```
 
 
 
@@ -127,11 +157,3 @@ git checkout -t origin/design       = copiando a branch remota para local
 git branch -a                       = lista as branch remotas e locais
 git push -d origin design           = remove a branch remota
 git fetch origin                    = verificar se foram criadas novas branch no repositório remoto
-
-
-***************************************
-
-git tag                             = exibe todas as tags
-git show <nome-tag>                 = exibe uma tag expecífica
-git tag -a <versao> -m "<comentario>" = cria uma tag nome a versão e um comentário
-git push origin <nome-tag>          = envia a tag para ambiente remoto
