@@ -107,7 +107,7 @@ git remote remove <nome repositório>
 git push origin <nome branch>
 ```
 
-##Tags
+## Tags
 * Exibe todas as tags
 ```
 git tag
@@ -143,17 +143,48 @@ git push --delete origin <nome tag>
 git tag -d <nome tag>
 ```
 
+## Branchs
+* Cria uma nova branch
+```
+git branch <nome branch>
+```
+
+* Cria uma nova branch e já muda para a nova branch
+```
+git branch -b checkout <nome branch>
+```
+
+* Envia a branch para o respositório remoto, sem a necessidade de especificar o nome da nova branch em um próximo push devido ao parâmetro -u
+```
+git push -u origin <nome branch>
+```
+
+* Visualizando as branch remotas
+```
+git branch -r
+```
+
+* Copiando a branch remota para local
+```
+git checkout -t origin/<nome branch>
+```
+
+* Listando as branch remotas e locais
+```
+git branch -a
+```
+
+* Removendo a branch remota
+```
+git push origin -d <nome branch>
+```
+
+* Removendo a branch local
+```
+git branch -d <nome branch>
+```
 
 
 git blame                           = mostra quem realizou alterações no projeto
 git ls-files                        = mostra os arquivos que o git está monitorando
 *************************************
-
-git branch                          = cria uma nova branch
-git branch -b checkout nome_branch  = cria um nova branch e seleciona
-git push -u origin nome_branch      = cria uma nova branch porém ao realizar pull não será necessário especificar o nome da nova branch
-git branch -r                       = permite visualizar as branch remota
-git checkout -t origin/design       = copiando a branch remota para local
-git branch -a                       = lista as branch remotas e locais
-git push -d origin design           = remove a branch remota
-git fetch origin                    = verificar se foram criadas novas branch no repositório remoto
